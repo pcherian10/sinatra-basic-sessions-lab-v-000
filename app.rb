@@ -1,3 +1,4 @@
+require 'pry'
 require_relative 'config/environment'
 
 class App < Sinatra::Base
@@ -13,7 +14,7 @@ class App < Sinatra::Base
 
   post '/checkout' do
     @session = params["item"]
-
+    binding.pry
     erb :item
   end
 
